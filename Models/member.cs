@@ -1,15 +1,18 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Apifortest.Models
 {
-    public class member
+    public class Member
     {
-        public int UserId {get;set;}
-        public string username{get;set;}
-        public string password{get;set;}
-        public string email{get;set;}
-        public DateTime brithday{get;set;} 
-        public DateTime stamtime{get;set;}
+        
+        [Key]
+        public int Mid {get;set;}
+        public string Name{get;set;}
+        public string Password{get;set;}
+        public string Email{get;set;}
+        public DateTime? Brithday{get;set;} 
+        public DateTime? stamtime{get;set;}
         
     }
 }
