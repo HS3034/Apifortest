@@ -13,6 +13,9 @@ using Microsoft.Extensions.Logging;
 
 using Microsoft.EntityFrameworkCore;
 using Apifortest.Models;
+
+using Newtonsoft.Json.Serialization;
+
 namespace Apifortest
 {
     public class Startup
@@ -27,9 +30,22 @@ namespace Apifortest
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+             services.AddCors();
+            services.AddControllers()
+                .AddJsonOptions(options =>
+                {
+                    options.JsonSerializerOptions.PropertyNameCaseInsensitive = true;
+                    options.JsonSerializerOptions.AllowTrailingCommas = true;
+                })
+                .AddNewtonsoftJson(options =>
+                {
+                    options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+                    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+                    options.SerializerSettings.NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore;
+                });
+
             services.AddControllers();
-            services.AddDbContext<AppcontextDb>(options =>
-            options.UseNpgsql(Configuration.GetConnectionString("stringContext")));
+            services.AddDbContext<AppcontextDb>(options => options.UseNpgsql(Configuration.GetConnectionString("stringContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

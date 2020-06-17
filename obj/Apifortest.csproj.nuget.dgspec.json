@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\WorkShop_DotnetCore\\Apifortest\\Apifortest.csproj": {}
+    "D:\\WorkShop_NetCore\\Apifortest\\Apifortest.csproj": {}
   },
   "projects": {
-    "D:\\WorkShop_DotnetCore\\Apifortest\\Apifortest.csproj": {
+    "D:\\WorkShop_NetCore\\Apifortest\\Apifortest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\WorkShop_DotnetCore\\Apifortest\\Apifortest.csproj",
+        "projectUniqueName": "D:\\WorkShop_NetCore\\Apifortest\\Apifortest.csproj",
         "projectName": "Apifortest",
-        "projectPath": "D:\\WorkShop_DotnetCore\\Apifortest\\Apifortest.csproj",
-        "packagesPath": "C:\\Users\\TaHz_NB\\.nuget\\packages\\",
-        "outputPath": "D:\\WorkShop_DotnetCore\\Apifortest\\obj\\",
+        "projectPath": "D:\\WorkShop_NetCore\\Apifortest\\Apifortest.csproj",
+        "packagesPath": "C:\\Users\\3034.ADHOMESHOP\\.nuget\\packages\\",
+        "outputPath": "D:\\WorkShop_NetCore\\Apifortest\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\TaHz_NB\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\3034.ADHOMESHOP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -41,6 +41,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -78,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
         }
       }
     }
