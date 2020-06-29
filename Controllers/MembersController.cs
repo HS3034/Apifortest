@@ -28,6 +28,7 @@ namespace Apifortest.Controllers
         }
 
         [HttpGet("{id}")]
+        
         public async Task<ActionResult<Member>> GetMember(int id)
         {
             var pd = await _dbContext.members.FindAsync(id);
